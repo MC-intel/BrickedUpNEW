@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Masonry - Quality Craftsmanship</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/808080/ffffff?text=Masonry+Background');
+            background-size: cover;
+            background-position: center;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 smooth-scroll">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">Elite Masonry</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#services" class="text-gray-600 hover:text-gray-900 transition duration-300">Services</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-gray-900 transition duration-300">Portfolio</a>
+                <a href="#portal" class="text-gray-600 hover:text-gray-900 transition duration-300">Job Request</a>
+                <a href="#contact" class="text-gray-600 hover:text-gray-900 transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden flex items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#services" class="block py-2 px-4 text-sm hover:bg-gray-200">Services</a>
+            <a href="#portfolio" class="block py-2 px-4 text-sm hover:bg-gray-200">Portfolio</a>
+            <a href="#portal" class="block py-2 px-4 text-sm hover:bg-gray-200">Job Request</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white h-[60vh] flex flex-col justify-center items-center text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">Expert Masonry & Timeless Craftsmanship</h2>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Building solid foundations and beautiful structures that last a lifetime.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+                    <a href="tel:123-456-7890" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full md:w-auto">Call Us: (123) 456-7890</a>
+                    <a href="mailto:owner@elitemasonry.com" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full md:w-auto">Email: owner@elitemasonry.com</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-12">Our Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Brickwork</h4>
+                        <p>From new constructions to intricate repairs, we handle all types of bricklaying with precision.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Stonework</h4>
+                        <p>Custom stone patios, retaining walls, and beautiful veneers that add natural elegance to your property.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Chimney Repair</h4>
+                        <p>Expert chimney inspections, repairs, and rebuilding to ensure safety and functionality.</p>
+                    </div>
+                     <!-- Service 4 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Patios & Walkways</h4>
+                        <p>Creating durable and stunning outdoor living spaces with pavers, flagstone, and more.</p>
+                    </div>
+                     <!-- Service 5 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Tuckpointing</h4>
+                        <p>Preserving the integrity and appearance of your masonry by repairing mortar joints.</p>
+                    </div>
+                     <!-- Service 6 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Foundation Repair</h4>
+                        <p>Addressing cracks and structural issues to ensure your building's foundation is secure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-12">Our Work</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Portfolio Image 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/600x400/cccccc/333333?text=Project+1" alt="Masonry Project 1" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg">Stone Fireplace</h5>
+                            <p class="text-gray-600">A beautiful centerpiece for a family home.</p>
+                        </div>
+                    </div>
+                    <!-- Portfolio Image 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/600x400/cccccc/333333?text=Project+2" alt="Masonry Project 2" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg">Brick Patio</h5>
+                            <p class="text-gray-600">Custom herringbone pattern brick patio.</p>
+                        </div>
+                    </div>
+                    <!-- Portfolio Image 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/600x400/cccccc/333333?text=Project+3" alt="Masonry Project 3" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                        <div class="p-6">
+                            <h5 class="font-bold text-lg">Retaining Wall</h5>
+                            <p class="text-gray-600">Durable and functional stone retaining wall.</p>
+                        </div>
+                    </div>
+                    <!-- Portfolio Image 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/600x400/cccccc/333333?text=Project+4" alt="Masonry Project 4" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                         <div class="p-6">
+                            <h5 class="font-bold text-lg">Outdoor Kitchen</h5>
+                            <p class="text-gray-600">A complete outdoor kitchen with brick finish.</p>
+                        </div>
+                    </div>
+                    <!-- Portfolio Image 5 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/600x400/cccccc/333333?text=Project+5" alt="Masonry Project 5" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                         <div class="p-6">
+                            <h5 class="font-bold text-lg">Chimney Restoration</h5>
+                            <p class="text-gray-600">Full restoration of a historic chimney.</p>
+                        </div>
+                    </div>
+                    <!-- Portfolio Image 6 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/600x400/cccccc/333333?text=Project+6" alt="Masonry Project 6" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                         <div class="p-6">
+                            <h5 class="font-bold text-lg">Walkway & Steps</h5>
+                            <p class="text-gray-600">Elegant stone walkway and entrance steps.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Request Portal Section -->
+        <section id="portal" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-4">Request a Quote</h3>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Fill out the form below to tell us about your project. Please be as detailed as possible. We'll get back to you within 2 business days.</p>
+                
+                <div id="form-container" class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg shadow-md">
+                    <form id="job-request-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- First Name -->
+                            <div>
+                                <label for="firstName" class="block text-gray-700 font-semibold mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                            </div>
+                            <!-- Last Name -->
+                            <div>
+                                <label for="lastName" class="block text-gray-700 font-semibold mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                            </div>
+                            <!-- Email -->
+                            <div>
+                                <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                            </div>
+                            <!-- Phone -->
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <!-- Address -->
+                            <div class="md:col-span-2">
+                                <label for="address" class="block text-gray-700 font-semibold mb-2">Project Address</label>
+                                <input type="text" id="address" name="address" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                            </div>
+                            <!-- Job Description -->
+                            <div class="md:col-span-2">
+                                <label for="description" class="block text-gray-700 font-semibold mb-2">Job Description</label>
+                                <textarea id="description" name="description" rows="6" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required placeholder="Describe the work you need done. For example: 'I need to repair a crumbling section of my brick chimney.' or 'I would like a quote for a new 12x15 foot paver patio.'"></textarea>
+                            </div>
+                            <!-- File Upload -->
+                            <div class="md:col-span-2">
+                                <label for="jobPhotos" class="block text-gray-700 font-semibold mb-2">Add Pictures (Optional)</label>
+                                <input type="file" id="jobPhotos" name="jobPhotos" multiple class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-amber-50 file:text-amber-700 hover:file:bg-amber-100" accept="image/*">
+                                <p class="text-xs text-gray-500 mt-1">You can upload up to 5 images (JPG, PNG).</p>
+                            </div>
+                        </div>
+                        <div class="text-center mt-8">
+                            <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-12 rounded-lg transition duration-300">Submit Request</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Success Message -->
+                <div id="success-message" class="hidden max-w-4xl mx-auto mt-8 p-6 bg-green-100 border border-green-400 text-green-700 rounded-lg text-center">
+                    <h4 class="font-bold text-xl mb-2">Thank You!</h4>
+                    <p>Your job request has been submitted successfully. We will review the details and get back to you shortly.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h4 class="text-2xl font-bold mb-4">Elite Masonry</h4>
+            <p class="mb-2">Serving the greater area with pride and quality.</p>
+            <p class="mb-4"><strong>Phone:</strong> <a href="tel:123-456-7890" class="hover:text-amber-400">(123) 456-7890</a></p>
+            <p class="mb-6"><strong>Email:</strong> <a href="mailto:owner@elitemasonry.com" class="hover:text-amber-400">owner@elitemasonry.com</a></p>
+            <p class="text-gray-400 text-sm">&copy; 2024 Elite Masonry. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form submission logic
+        const form = document.getElementById('job-request-form');
+        const formContainer = document.getElementById('form-container');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // --- IMPORTANT ---
+            // In a real-world application, you would send this data to a server.
+            // Client-side JavaScript cannot directly send emails for security reasons.
+            // You would need a backend service (e.g., using Node.js, PHP, or Python)
+            // or a third-party service like EmailJS or Formspree to handle the email sending.
+            //
+            // The following code simulates a successful submission for demonstration.
+            // -----------------
+
+            // 1. Get form data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            const photos = formData.getAll('jobPhotos');
+            
+            data.photos = [];
+            photos.forEach(photo => {
+                if (photo.name) {
+                    data.photos.push({
+                        name: photo.name,
+                        size: photo.size,
+                        type: photo.type
+                    });
+                }
+            });
+
+            console.log("--- Job Request Submitted ---");
+            console.log("Client Information:", {
+                firstName: data.firstName,
+                lastName: data.lastName,
+                email: data.email,
+                phone: data.phone,
+                address: data.address
+            });
+            console.log("Job Description:", data.description);
+            console.log("Uploaded Files:", data.photos);
+            console.log("----------------------------");
+
+            // 2. Hide the form and show the success message
+            formContainer.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+
+            // Optional: Scroll to the success message
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // You can reset the form after a delay if you want
+            // setTimeout(() => {
+            //     form.reset();
+            //     formContainer.classList.remove('hidden');
+            //     successMessage.classList.add('hidden');
+            // }, 10000); // 10 seconds
+        });
+    </script>
+</body>
+</html>
