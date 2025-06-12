@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BrickedUp Masonry offers expert masonry services including brickwork, stonework, chimney repair, and more. Request a free quote today!">
-    <title>BrickedUp Masonry</title>
+    <meta name="description" content="View BrickedUp Masonry's portfolio of completed projects, showcasing our brickwork, stonework, and chimney repairs.">
+    <title>Our Work - BrickedUp Masonry</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -17,7 +17,7 @@
             <h1 class="text-2xl font-bold text-gray-900"><a href="index.html">BrickedUp Masonry</a></h1>
             <div class="hidden md:flex space-x-6">
                 <a href="services.html" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm">Services</a>
-                <a href="portfolio.html" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm">Portfolio</a>
+                <a href="portfolio.html" class="text-amber-600 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm">Portfolio</a>
                 <a href="contact.html#portal" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm">Job Request</a>
                 <a href="contact.html" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm">Contact</a>
             </div>
@@ -28,42 +28,20 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
             <a href="services.html" class="block py-2 px-4 text-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">Services</a>
-            <a href="portfolio.html" class="block py-2 px-4 text-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">Portfolio</a>
+            <a href="portfolio.html" class="block py-2 px-4 text-sm text-amber-600 font-semibold hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">Portfolio</a>
             <a href="contact.html#portal" class="block py-2 px-4 text-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">Job Request</a>
             <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">Contact</a>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero-bg text-white h-[60vh] flex flex-col justify-center items-center text-center">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl md:text-6xl font-bold mb-4">Expert Masonry & Timeless Craftsmanship</h2>
-                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Building solid foundations and beautiful structures that last a lifetime.</p>
-                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
-                    <a href="tel:555-123-4567" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full md:w-auto">Call Us: (555) 123-4567</a>
-                    <a href="mailto:contact@brickedupmasonrydemo.com" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full md:w-auto">Email: contact@elitemasonrydemo.com</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <h3 class="text-3xl font-bold text-center mb-12">Our Services</h3>
-                <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Services will be dynamically loaded here by script.js -->
-                </div>
-            </div>
-        </section>
-
         <!-- Portfolio Section -->
-        <section id="portfolio" class="py-20">
+        <section id="portfolio" class="py-20 bg-white"> <!-- Changed background to white for portfolio page -->
             <div class="container mx-auto px-6">
                 <h3 class="text-3xl font-bold text-center mb-12">Our Work</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Portfolio Image 1 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden"> <!-- Slightly different bg for cards -->
                         <img src="https://placehold.co/600x400/A0522D/FFFFFF?text=Modern+Brick+Fireplace" alt="Placeholder image for a modern brick fireplace project" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
                         <div class="p-6">
                             <h5 class="font-bold text-lg">Stone Fireplace</h5>
@@ -71,7 +49,7 @@
                         </div>
                     </div>
                     <!-- Portfolio Image 2 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
                         <img src="https://placehold.co/600x400/B5651D/FFFFFF?text=Stone+Patio+Construction" alt="Placeholder image for a custom stone patio project" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
                         <div class="p-6">
                             <h5 class="font-bold text-lg">Brick Patio</h5>
@@ -79,7 +57,7 @@
                         </div>
                     </div>
                     <!-- Portfolio Image 3 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
                         <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Brick+Retaining+Wall" alt="Placeholder image for a brick retaining wall project" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
                         <div class="p-6">
                             <h5 class="font-bold text-lg">Retaining Wall</h5>
@@ -87,7 +65,7 @@
                         </div>
                     </div>
                     <!-- Portfolio Image 4 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
                         <img src="https://placehold.co/600x400/CD853F/FFFFFF?text=Outdoor+Brick+Kitchen" alt="Placeholder image for an outdoor brick kitchen project" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
                          <div class="p-6">
                             <h5 class="font-bold text-lg">Outdoor Kitchen</h5>
@@ -95,7 +73,7 @@
                         </div>
                     </div>
                     <!-- Portfolio Image 5 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
                         <img src="https://placehold.co/600x400/D2691E/FFFFFF?text=Chimney+Repair+Service" alt="Placeholder image for a chimney repair project" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
                          <div class="p-6">
                             <h5 class="font-bold text-lg">Chimney Restoration</h5>
@@ -103,7 +81,7 @@
                         </div>
                     </div>
                     <!-- Portfolio Image 6 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
                         <img src="https://placehold.co/600x400/A0522D/FFFFFF?text=Stone+Walkway+and+Steps" alt="Placeholder image for a stone walkway and steps project" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
                          <div class="p-6">
                             <h5 class="font-bold text-lg">Walkway & Steps</h5>
@@ -114,16 +92,6 @@
             </div>
         </section>
         <!-- End Portfolio Section -->
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <h3 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h3>
-                <div id="testimonials-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Testimonials will be dynamically loaded here by script.js -->
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
