@@ -54,37 +54,159 @@ form.addEventListener('submit', function(event) {
     // The form reset logic was removed as per Subtask 1 requirements.
 });
 
+// --- Dynamic Content Loading ---
+
+/**
+ * Fetches business data from data.json
+ * @returns {Promise<object>} A promise that resolves with the business data.
+ */
+async function fetchBusinessData() {
+    try {
+        const response = await fetch('data.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching business data:", error);
+        // Optionally, display a user-friendly message on the page
+        return null; // Or throw the error to be caught by the caller
+    }
+}
+
+/**
+ * Renders services to the page.
+ * @param {Array<object>} services - Array of service objects.
+ */
+function renderServices(services) {
+    const container = document.getElementById('services-container');
+    if (!container) {
+        console.error("Services container not found.");
+        return;
+    }
+    container.innerHTML = ''; // Clear existing content
+
+    services.forEach(service => {
+        const serviceDiv = document.createElement('div');
+        serviceDiv.className = 'bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300';
+        serviceDiv.innerHTML = `
+            <h4 class="text-xl font-semibold text-amber-700 mb-2">${service.name}</h4>
+            <p class="text-gray-600">${service.description}</p>
+        `;
+        container.appendChild(serviceDiv);
+    });
+}
+
+/**
+ * Renders portfolio items to the page.
+ * @param {Array<object>} portfolioItems - Array of portfolio item objects.
+ */
+function renderPortfolio(portfolioItems) {
+    const container = document.getElementById('portfolio-container');
+    if (!container) {
+        console.error("Portfolio container not found.");
+        return;
+    }
+    container.innerHTML = ''; // Clear existing content
+
+    portfolioItems.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300';
+        itemDiv.innerHTML = `
+            <img src="${item.imageUrl}" alt="${item.altText}" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h4 class="text-lg font-semibold text-amber-700 mb-1">${item.title}</h4>
+                <p class="text-gray-600 text-sm">${item.description}</p>
+            </div>
+        `;
+        container.appendChild(itemDiv);
+    });
+}
+
+/**
+ * Renders testimonials to the page.
+ * @param {Array<object>} testimonials - Array of testimonial objects.
+ */
+function renderTestimonials(testimonials) {
+    const container = document.getElementById('testimonials-container');
+    if (!container) {
+        console.error("Testimonials container not found.");
+        return;
+    }
+    container.innerHTML = ''; // Clear existing content
+
+    testimonials.forEach(testimonial => {
+        const testimonialDiv = document.createElement('div');
+        testimonialDiv.className = 'bg-amber-50 p-6 rounded-lg shadow-md italic';
+        testimonialDiv.innerHTML = `
+            <p class="text-gray-700 mb-4">"${testimonial.quote}"</p>
+            <p class="text-right font-semibold text-amber-700">${testimonial.author}</p>
+        `;
+        container.appendChild(testimonialDiv);
+    });
+}
+
+// --- Initialization ---
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const businessData = await fetchBusinessData();
+        if (businessData) {
+            if (businessData.services) {
+                renderServices(businessData.services);
+            }
+            if (businessData.portfolio) {
+                renderPortfolio(businessData.portfolio);
+            }
+            if (businessData.testimonials) {
+                renderTestimonials(businessData.testimonials);
+            }
+        } else {
+            console.error("Failed to load business data. Content will not be rendered.");
+            // Optionally, display a user-friendly error message on the page
+        }
+    } catch (error) {
+        console.error("Error during initialization:", error);
+    }
+});
+
 // --- Email Sending Functionality ---
 const API_BASE_URL = 'https://script.google.com/macros/s/AKfycbwE8BSAXZBSwjIn92wZ58OrCQuXhjAF7vDIElHTxf5EdCPhhDmJSvCFaq9xEFRMZbShBA/exec';
 
-// Updated to reflect new form fields
-const firstNameInput = document.getElementById('firstNameEmail');
-const lastNameInput = document.getElementById('lastNameEmail');
-const messageInput = document.getElementById('messageEmail');
-const sendEmailButton = document.getElementById('sendEmailButton');
-const messageBox = document.getElementById('messageBox');
+document.addEventListener('DOMContentLoaded', function() {
+    // Updated to reflect new form fields
+    const firstNameInput = document.getElementById('firstNameEmail');
+    const lastNameInput = document.getElementById('lastNameEmail');
+    const messageInput = document.getElementById('messageEmail');
+    const sendEmailButton = document.getElementById('sendEmailButton');
+    const messageBox = document.getElementById('messageBox');
 
-/**
- * Displays a message in the messageBox.
- * @param {string} message - The message to display.
- * @param {'success' | 'error' | 'info'} type - The type of message.
- */
-function showMessage(message, type) {
-    messageBox.textContent = message;
-    messageBox.classList.remove('hidden', 'bg-green-100', 'text-green-700', 'bg-red-100', 'text-red-700', 'bg-blue-100', 'text-blue-700');
-    messageBox.classList.add('p-4', 'rounded-lg', 'text-center'); // Common classes
+    /**
+     * Displays a message in the messageBox.
+     * @param {string} message - The message to display.
+     * @param {'success' | 'error' | 'info'} type - The type of message.
+     */
+    function showMessage(message, type) {
+        // Ensure messageBox is found before trying to use it
+        if (!messageBox) {
+            console.error('MessageBox element not found. Cannot display message.');
+            return;
+        }
+        messageBox.textContent = message;
+        messageBox.classList.remove('hidden', 'bg-green-100', 'text-green-700', 'bg-red-100', 'text-red-700', 'bg-blue-100', 'text-blue-700');
+        messageBox.classList.add('p-4', 'rounded-lg', 'text-center'); // Common classes
 
-    if (type === 'success') {
-        messageBox.classList.add('bg-green-100', 'text-green-700');
-    } else if (type === 'error') {
-        messageBox.classList.add('bg-red-100', 'text-red-700');
-    } else { // 'info' or default
-        messageBox.classList.add('bg-blue-100', 'text-blue-700');
+        if (type === 'success') {
+            messageBox.classList.add('bg-green-100', 'text-green-700');
+        } else if (type === 'error') {
+            messageBox.classList.add('bg-red-100', 'text-red-700');
+        } else { // 'info' or default
+            messageBox.classList.add('bg-blue-100', 'text-blue-700');
+        }
+        messageBox.classList.remove('hidden'); // Make it visible
     }
-    messageBox.classList.remove('hidden'); // Make it visible
-}
 
-if (sendEmailButton) {
+    if (sendEmailButton) {
     sendEmailButton.addEventListener('click', () => {
         const firstName = firstNameInput.value.trim();
         const lastName = lastNameInput.value.trim();
@@ -151,4 +273,5 @@ if (sendEmailButton) {
     // However, since this script is deferred and IDs are assumed correct from previous subtasks,
     // this console log is more for debugging potential future issues.
     console.log("Send Email Button not found. Email functionality will not be active.");
-}
+    }
+});
