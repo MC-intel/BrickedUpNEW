@@ -49,34 +49,40 @@ form.addEventListener('submit', function(event) {
 // --- Email Sending Functionality ---
 const API_BASE_URL = 'https://script.google.com/macros/s/AKfycbwE8BSAXZBSwjIn92wZ58OrCQuXhjAF7vDIElHTxf5EdCPhhDmJSvCFaq9xEFRMZbShBA/exec';
 
-// Updated to reflect new form fields
-const firstNameInput = document.getElementById('firstNameEmail');
-const lastNameInput = document.getElementById('lastNameEmail');
-const messageInput = document.getElementById('messageEmail');
-const sendEmailButton = document.getElementById('sendEmailButton');
-const messageBox = document.getElementById('messageBox');
+document.addEventListener('DOMContentLoaded', function() {
+    // Updated to reflect new form fields
+    const firstNameInput = document.getElementById('firstNameEmail');
+    const lastNameInput = document.getElementById('lastNameEmail');
+    const messageInput = document.getElementById('messageEmail');
+    const sendEmailButton = document.getElementById('sendEmailButton');
+    const messageBox = document.getElementById('messageBox');
 
-/**
- * Displays a message in the messageBox.
- * @param {string} message - The message to display.
- * @param {'success' | 'error' | 'info'} type - The type of message.
- */
-function showMessage(message, type) {
-    messageBox.textContent = message;
-    messageBox.classList.remove('hidden', 'bg-green-100', 'text-green-700', 'bg-red-100', 'text-red-700', 'bg-blue-100', 'text-blue-700');
-    messageBox.classList.add('p-4', 'rounded-lg', 'text-center'); // Common classes
+    /**
+     * Displays a message in the messageBox.
+     * @param {string} message - The message to display.
+     * @param {'success' | 'error' | 'info'} type - The type of message.
+     */
+    function showMessage(message, type) {
+        // Ensure messageBox is found before trying to use it
+        if (!messageBox) {
+            console.error('MessageBox element not found. Cannot display message.');
+            return;
+        }
+        messageBox.textContent = message;
+        messageBox.classList.remove('hidden', 'bg-green-100', 'text-green-700', 'bg-red-100', 'text-red-700', 'bg-blue-100', 'text-blue-700');
+        messageBox.classList.add('p-4', 'rounded-lg', 'text-center'); // Common classes
 
-    if (type === 'success') {
-        messageBox.classList.add('bg-green-100', 'text-green-700');
-    } else if (type === 'error') {
-        messageBox.classList.add('bg-red-100', 'text-red-700');
-    } else { // 'info' or default
-        messageBox.classList.add('bg-blue-100', 'text-blue-700');
+        if (type === 'success') {
+            messageBox.classList.add('bg-green-100', 'text-green-700');
+        } else if (type === 'error') {
+            messageBox.classList.add('bg-red-100', 'text-red-700');
+        } else { // 'info' or default
+            messageBox.classList.add('bg-blue-100', 'text-blue-700');
+        }
+        messageBox.classList.remove('hidden'); // Make it visible
     }
-    messageBox.classList.remove('hidden'); // Make it visible
-}
 
-if (sendEmailButton) {
+    if (sendEmailButton) {
     sendEmailButton.addEventListener('click', () => {
         const firstName = firstNameInput.value.trim();
         const lastName = lastNameInput.value.trim();
@@ -143,4 +149,5 @@ if (sendEmailButton) {
     // However, since this script is deferred and IDs are assumed correct from previous subtasks,
     // this console log is more for debugging potential future issues.
     console.log("Send Email Button not found. Email functionality will not be active.");
-}
+    }
+});
