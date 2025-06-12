@@ -14,44 +14,54 @@ mobileMenuLinks.forEach(link => {
 });
 
 // Form submission logic
-const form = document.getElementById('job-request-form');
-const formContainer = document.getElementById('form-container');
-const successMessage = document.getElementById('success-message');
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('job-request-form');
+    const formContainer = document.getElementById('form-container');
+    const successMessage = document.getElementById('success-message');
 
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    // Ensure form element exists before adding event listener
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
 
-    // --- IMPORTANT ---
-    // In a real-world application, you would send this data to a server.
-    // Client-side JavaScript cannot directly send emails for security reasons.
-    // You would need a backend service (e.g., using Node.js, PHP, or Python)
-    // or a third-party service like EmailJS or Formspree to handle the email sending.
-    //
-    // The following code simulates a successful submission for demonstration.
-    // -----------------
+            // --- IMPORTANT ---
+            // In a real-world application, you would send this data to a server.
+            // Client-side JavaScript cannot directly send emails for security reasons.
+            // You would need a backend service (e.g., using Node.js, PHP, or Python)
+            // or a third-party service like EmailJS or Formspree to handle the email sending.
+            //
+            // The following code simulates a successful submission for demonstration.
+            // -----------------
 
-    // 1. Get form data
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-    // The form data processing and console logs are removed as per the new requirements from Subtask 1.
+            // 1. Get form data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            // The form data processing and console logs are removed as per the new requirements from Subtask 1.
 
-    // 2. Hide the form and show the success message
-    formContainer.classList.add('hidden');
+            // 2. Hide the form and show the success message
+            if (formContainer) {
+                formContainer.classList.add('hidden');
+            }
 
-    // Update success message content (as per Subtask 1)
-    successMessage.innerHTML = `
-        <h4 class="font-bold text-xl mb-2">Thank You for Your Interest!</h4>
-        <p class="mb-1">This form is for demonstration purposes only and does not actively submit your request.</p>
-        <p class="mb-3">To request a quote, please contact us directly:</p>
-        <p class="mb-1"><a href="mailto:contact@brickdeupmasonrydemo.com" class="text-amber-600 hover:text-amber-700 font-semibold">Email: contact@elitemasonrydemo.com</a></p>
-        <p><a href="tel:5551234567" class="text-amber-600 hover:text-amber-700 font-semibold">Call: (555) 123-4567</a></p>
-    `;
-    successMessage.classList.remove('hidden');
+            // Update success message content (as per Subtask 1)
+            if (successMessage) {
+                successMessage.innerHTML = `
+                    <h4 class="font-bold text-xl mb-2">Thank You for Your Interest!</h4>
+                    <p class="mb-1">This form is for demonstration purposes only and does not actively submit your request.</p>
+                    <p class="mb-3">To request a quote, please contact us directly:</p>
+                    <p class="mb-1"><a href="mailto:contact@brickdeupmasonrydemo.com" class="text-amber-600 hover:text-amber-700 font-semibold">Email: contact@elitemasonrydemo.com</a></p>
+                    <p><a href="tel:5551234567" class="text-amber-600 hover:text-amber-700 font-semibold">Call: (555) 123-4567</a></p>
+                `;
+                successMessage.classList.remove('hidden');
 
-    // Optional: Scroll to the success message
-    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-    // The form reset logic was removed as per Subtask 1 requirements.
+                // Optional: Scroll to the success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            // The form reset logic was removed as per Subtask 1 requirements.
+        });
+    } else {
+        console.warn("Job request form not found. Submission logic not attached.");
+    }
 });
 
 // --- Dynamic Content Loading ---
