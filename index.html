@@ -228,8 +228,22 @@
                 <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Send a Quick Message</h2> <!-- Adjusted title slightly -->
 
                 <div class="mb-4">
-                    <label for="emailBody" class="block text-gray-700 text-sm font-semibold mb-2">Your Message:</label> <!-- Adjusted label -->
-                    <textarea id="emailBody"
+                    <label for="firstNameEmail" class="block text-gray-700 text-sm font-semibold mb-2">First Name:</label>
+                    <input type="text" id="firstNameEmail" name="firstNameEmail"
+                           class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out"
+                           placeholder="Enter your first name...">
+                </div>
+
+                <div class="mb-4">
+                    <label for="lastNameEmail" class="block text-gray-700 text-sm font-semibold mb-2">Last Name:</label>
+                    <input type="text" id="lastNameEmail" name="lastNameEmail"
+                           class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out"
+                           placeholder="Enter your last name...">
+                </div>
+
+                <div class="mb-4">
+                    <label for="messageEmail" class="block text-gray-700 text-sm font-semibold mb-2">Your Message:</label>
+                    <textarea id="messageEmail" name="messageEmail"
                               class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out h-32 resize-none"
                               placeholder="Enter your message here..."></textarea>
                 </div>

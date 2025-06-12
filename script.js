@@ -49,7 +49,10 @@ form.addEventListener('submit', function(event) {
 // --- Email Sending Functionality ---
 const API_BASE_URL = 'https://script.google.com/macros/s/AKfycbwE8BSAXZBSwjIn92wZ58OrCQuXhjAF7vDIElHTxf5EdCPhhDmJSvCFaq9xEFRMZbShBA/exec';
 
-const emailBodyInput = document.getElementById('emailBody');
+// Updated to reflect new form fields
+const firstNameInput = document.getElementById('firstNameEmail');
+const lastNameInput = document.getElementById('lastNameEmail');
+const messageInput = document.getElementById('messageEmail');
 const sendEmailButton = document.getElementById('sendEmailButton');
 const messageBox = document.getElementById('messageBox');
 
@@ -75,10 +78,23 @@ function showMessage(message, type) {
 
 if (sendEmailButton) {
     sendEmailButton.addEventListener('click', () => {
-        const emailBody = emailBodyInput.value.trim();
+        const firstName = firstNameInput.value.trim();
+        const lastName = lastNameInput.value.trim();
+        const message = messageInput.value.trim();
 
-        if (!emailBody) {
+        if (!firstName) {
+            showMessage('Please enter your First Name.', 'error');
+            firstNameInput.focus(); // Optional: focus the empty field
+            return;
+        }
+        if (!lastName) {
+            showMessage('Please enter your Last Name.', 'error');
+            lastNameInput.focus(); // Optional: focus the empty field
+            return;
+        }
+        if (!message) {
             showMessage('Please enter a message before sending.', 'error');
+            messageInput.focus(); // Optional: focus the empty field
             return;
         }
 
@@ -88,7 +104,8 @@ if (sendEmailButton) {
         sendEmailButton.classList.add('opacity-50', 'cursor-not-allowed');
         showMessage('Sending your message...', 'info');
 
-        const encodedBody = encodeURIComponent(emailBody);
+        const emailBodyString = `First Name: ${firstName}\nLast Name: ${lastName}\nMessage: ${message}`;
+        const encodedBody = encodeURIComponent(emailBodyString);
         const fullUrl = `${API_BASE_URL}?body=${encodedBody}`;
 
         fetch(fullUrl, {
@@ -102,7 +119,9 @@ if (sendEmailButton) {
         .then(data => {
             if (data.includes("Email sent successfully")) {
                 showMessage('Email sent successfully!', 'success');
-                emailBodyInput.value = ''; // Clear the textarea
+                firstNameInput.value = ''; // Clear the first name field
+                lastNameInput.value = '';  // Clear the last name field
+                messageInput.value = '';   // Clear the message field
             } else {
                 // If the Apps Script returns an error or unexpected response
                 showMessage(`Error: ${data}`, 'error');
