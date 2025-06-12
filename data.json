@@ -1,0 +1,80 @@
+{
+  "services": [
+    {
+      "name": "Brickwork",
+      "description": "From new constructions to intricate repairs, we handle all types of bricklaying with precision."
+    },
+    {
+      "name": "Stonework",
+      "description": "Custom stone patios, retaining walls, and beautiful veneers that add natural elegance to your property."
+    },
+    {
+      "name": "Chimney Repair",
+      "description": "Expert chimney inspections, repairs, and rebuilding to ensure safety and functionality."
+    },
+    {
+      "name": "Patios & Walkways",
+      "description": "Creating durable and stunning outdoor living spaces with pavers, flagstone, and more."
+    },
+    {
+      "name": "Tuckpointing",
+      "description": "Preserving the integrity and appearance of your masonry by repairing mortar joints."
+    },
+    {
+      "name": "Foundation Repair",
+      "description": "Addressing cracks and structural issues to ensure your building's foundation is secure."
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "Stone Fireplace",
+      "description": "A stunning modern brick fireplace, perfect for contemporary homes.",
+      "imageUrl": "https://placehold.co/600x400/A0522D/FFFFFF?text=Modern+Brick+Fireplace",
+      "altText": "Modern Brick Fireplace Installation"
+    },
+    {
+      "title": "Brick Patio",
+      "description": "Spacious custom stone patio for outdoor living.",
+      "imageUrl": "https://placehold.co/600x400/B5651D/FFFFFF?text=Stone+Patio+Construction",
+      "altText": "Custom Stone Patio Construction"
+    },
+    {
+      "title": "Retaining Wall",
+      "description": "Sturdy and aesthetic brick retaining wall.",
+      "imageUrl": "https://placehold.co/600x400/8B4513/FFFFFF?text=Brick+Retaining+Wall",
+      "altText": "Brick Retaining Wall Project"
+    },
+    {
+      "title": "Outdoor Kitchen",
+      "description": "Deluxe outdoor kitchen with brick and stone finish.",
+      "imageUrl": "https://placehold.co/600x400/CD853F/FFFFFF?text=Outdoor+Brick+Kitchen",
+      "altText": "Outdoor Brick Kitchen Build"
+    },
+    {
+      "title": "Chimney Restoration",
+      "description": "Expert repair of a tall brick chimney.",
+      "imageUrl": "https://placehold.co/600x400/D2691E/FFFFFF?text=Chimney+Repair+Service",
+      "altText": "Professional Chimney Repair"
+    },
+    {
+      "title": "Walkway & Steps",
+      "description": "Beautifully crafted stone walkway and front steps.",
+      "imageUrl": "https://placehold.co/600x400/A0522D/FFFFFF?text=Stone+Walkway+and+Steps",
+      "altText": "Elegant Stone Walkway and Steps"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "BrickedUp Masonry transformed our backyard with a beautiful new stone patio. The craftsmanship is outstanding, and the team was professional throughout the entire project.",
+      "author": "- John & Jane Doe"
+    },
+    {
+      "quote": "Our chimney was in desperate need of repair. It looks better than new! Highly recommend their services.",
+      "author": "- Alice Smith"
+    },
+    {
+      "quote": "We hired them for some complex brickwork on our historic home. Their attention to detail and skill were evident. We're thrilled with the results.",
+      "author": "- Robert Jones"
+    }
+  ]
+}
