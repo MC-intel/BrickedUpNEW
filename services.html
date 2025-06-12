@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BrickedUp Masonry offers expert masonry services including brickwork, stonework, chimney repair, and more. Request a free quote today!">
+    <title>Our Services - BrickedUp Masonry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800 smooth-scroll">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900"><a href="index.html">BrickedUp Masonry</a></h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="services.html" class="text-amber-600 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm">Services</a>
+                <a href="portfolio.html" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm">Portfolio</a>
+                <a href="contact.html#portal" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm">Job Request</a>
+                <a href="contact.html" class="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden flex items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="services.html" class="block py-2 px-4 text-sm text-amber-600 font-semibold hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">Services</a>
+            <a href="portfolio.html" class="block py-2 px-4 text-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">Portfolio</a>
+            <a href="contact.html#portal" class="block py-2 px-4 text-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">Job Request</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-12">Our Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Brickwork</h4>
+                        <p>From new constructions to intricate repairs, we handle all types of bricklaying with precision.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Stonework</h4>
+                        <p>Custom stone patios, retaining walls, and beautiful veneers that add natural elegance to your property.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Chimney Repair</h4>
+                        <p>Expert chimney inspections, repairs, and rebuilding to ensure safety and functionality.</p>
+                    </div>
+                     <!-- Service 4 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Patios & Walkways</h4>
+                        <p>Creating durable and stunning outdoor living spaces with pavers, flagstone, and more.</p>
+                    </div>
+                     <!-- Service 5 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Tuckpointing</h4>
+                        <p>Preserving the integrity and appearance of your masonry by repairing mortar joints.</p>
+                    </div>
+                     <!-- Service 6 -->
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+                        <h4 class="text-xl font-semibold mb-2">Foundation Repair</h4>
+                        <p>Addressing cracks and structural issues to ensure your building's foundation is secure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact-footer" class="bg-gray-800 text-white py-12"> <!-- Changed id to avoid conflict with contact page section -->
+        <div class="container mx-auto px-6 text-center">
+            <h4 class="text-2xl font-bold mb-4">BrickedUp Masonry</h4>
+            <p class="mb-2">Serving the greater area with pride and quality.</p>
+            <p class="mb-4"><strong>Phone:</strong> <a href="tel:555-123-4567" class="hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-amber-500 rounded-sm">(555) 123-4567</a></p>
+            <p class="mb-6"><strong>Email:</strong> <a href="mailto:contact@brickedupemasonrydemo.com" class="hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-amber-500 rounded-sm">contact@elitemasonrydemo.com</a></p>
+            <p class="text-gray-400 text-sm">&copy; 2025 BrickedUp Masonry. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
