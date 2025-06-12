@@ -5,6 +5,14 @@ mobileMenuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
 });
 
+// Hide mobile menu when a link is clicked
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
+
 // Form submission logic
 const form = document.getElementById('job-request-form');
 const formContainer = document.getElementById('form-container');
