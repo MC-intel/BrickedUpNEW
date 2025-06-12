@@ -1,0 +1,11 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/A0522D/FFFFFF?text=Quality+Masonry+Work');
+    background-size: cover;
+    background-position: center;
+}
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
